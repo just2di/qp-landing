@@ -1,0 +1,14 @@
+:root {
+    --font-base: "Montserrat", Arial, Helvetica, sans-serif;
+    --font-secondary: 'Museosans', var(--font-base);
+    --font-color-base: rgb(51, 51, 51);
+    --font-color-secondary: rgb(79, 79, 79);
+    --section-bg: rgba(98, 72, 255, 0.1);
+    --primary-color: rgba(98, 72, 255, 1);
+}
+
+body {
+    font-family: var(--font-base);
+    background: rgba(255, 255, 255, 1);
+    color: var(--font-color-base);
+}

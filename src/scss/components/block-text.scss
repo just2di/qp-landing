@@ -1,0 +1,12 @@
+.block-text {
+    color: var(--font-color-secondary);
+    font-family: var(--font-base);
+    font-size: 18px;
+    line-height: 30px;
+
+    p {
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: 0;
+    }
+}

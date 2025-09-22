@@ -1,0 +1,10 @@
+.tutorial-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    grid-column: 1 / -1;
+
+    @media screen and (min-width: 1440px) {
+        grid-column: 2 / -2;
+    }
+}

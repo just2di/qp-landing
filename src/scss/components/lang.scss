@@ -1,0 +1,37 @@
+.lang {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+
+    select {
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 1);
+        background-color: #fff;
+        padding: 12px 36px 12px 16px;
+        border-radius: 60px;
+        font-family: var(--font-family-secondary);
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 15px;
+ 
+    }
+
+    &::after {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        pointer-events: none;
+        right: 16px;
+        transform: translateY(-50%);
+        background-image: url('/img/lang-aroow.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+
+    }
+}

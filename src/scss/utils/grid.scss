@@ -1,0 +1,16 @@
+.grid {
+    --grid-columns: 4;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+        --grid-columns: 8;
+        gap: 30px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        --grid-columns: 12;
+    }
+
+}

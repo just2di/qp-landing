@@ -1,0 +1,118 @@
+.feedback {
+    --feedback-padding-left: 48px;
+    display: block;
+    position: relative;
+
+    &__description {
+        grid-column: 1 / -1;
+
+        @media screen and (min-width: 1440px) {
+            grid-column: span 5;
+        }
+    }
+
+    &__swiper {
+        grid-column: 1 / -1;
+        padding-left: 0;
+        padding-top: 0;
+
+        @media screen and (min-width: 768px) {
+            grid-column: 2 / -2;
+        }
+
+        @media screen and (min-width: 1440px) {
+            grid-column: 6 / -1;
+            padding-left: 54px;
+            padding-top: 27px;
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        width: 100%;
+        top: unset;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+        max-width: 90vw;
+
+        @media screen and (min-width: 768px) {
+            top: 320px;
+            bottom: unset;
+            max-width: 88vw;
+            transform: translateX(-50%);
+        }
+
+        @media screen and (min-width: 1440px) {
+            position: static;
+            justify-content: normal;
+            padding-top: 40px;
+            transform: none;
+            max-width: none;
+        }
+    }
+
+    &__counter {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-left: 0;
+        display: flex;
+        gap: 4px;
+        font-family: var(--font-family-secondary);
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: var(--primary-color);
+
+        @media screen and (min-width: 1440px) {
+            display: block;
+            padding-left: var(--feedback-padding-left);
+        }
+    }
+}
+
+
+.fb-swiper-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.fb-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 2px solid #cbcbcb;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    transition: 0.2s ease-in border-color;
+    cursor: pointer;
+
+    img {
+        display: block;
+        width: 6px;
+        height: 11px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &:hover {
+        border-color: var(--primary-color);
+    }
+}
+
+.fb-button-prev {
+    img {
+        transform: rotate(-180deg);
+    }
+}

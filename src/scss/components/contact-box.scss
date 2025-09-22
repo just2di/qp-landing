@@ -1,0 +1,19 @@
+.contact-box {
+    padding: 48px 16px;
+    width: 100%;
+    background-color: #fff;
+    grid-column: 1 / -1;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+
+    @media screen and (min-width: 768px) {
+        grid-column: 2 / -2;
+        padding: 80px 42px;
+        min-height: 470px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        grid-column: 7 / -1;
+        padding: 80px;
+    }
+}

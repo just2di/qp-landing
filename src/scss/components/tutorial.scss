@@ -1,0 +1,98 @@
+.tutorial {
+
+
+    &__action {
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        span {
+            transition: transform 0.3s ease;
+            --transform-line: translate(-50%, -50%);
+        }
+
+
+        span:first-child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: var(--transform-line);
+            width: 18px;
+            height: 2px;
+            border-radius: 2px;
+            background-color: #000;
+        }
+
+        span:last-child {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: var(--transform-line);
+            width: 2px;
+            height: 18px;
+            border-radius: 2px;
+            background-color: #000;
+        }
+    }
+
+    &__body {
+        cursor: pointer;
+        padding: 24px 16px;
+        border: 2px solid var(--primary-color);
+        border-radius: 20px;
+
+        @media screen and (min-width: 768px) {
+            padding: 32px 40px 32px 40px;
+        }
+    }
+
+    &__title {
+        position: relative;
+        font-family: var(--font-secondary);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 0;
+        padding-right: 30px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 24px;
+            padding-right: 35px;
+        }
+    }
+
+    &__text {
+        padding-top: 0;
+        display: block; // keep block to allow height animation
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 250ms ease, max-height 250ms ease;
+        will-change: opacity, max-height;
+        color: var(--font-color-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+    }
+
+    &.is-open {
+        .tutorial__action {
+           span {
+            --transform-line: translate(-50%, -50%) rotate(45deg);
+           }
+        }
+        .tutorial__text {
+            padding-top: 24px;
+            opacity: 1;
+            max-height: 500px; // adjust if longer content is expected
+        }
+
+        .tutorial__body {
+            cursor: default;
+        }
+    }
+}

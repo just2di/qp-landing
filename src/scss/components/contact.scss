@@ -1,0 +1,10 @@
+.contact {
+    display: block;
+    padding: 48px 0;
+    background: var(--section-bg);
+
+    @media screen and (min-width: 1440px) {
+        padding: 120px 0;
+    }
+
+}

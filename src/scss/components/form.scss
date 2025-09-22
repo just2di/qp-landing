@@ -1,0 +1,85 @@
+.form-control {
+    display: block;
+
+    label {
+        display: block;
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        display: block;
+        background-color: #fff;
+        font-size: 16px;
+        color: var(--font-color-base);
+        padding: 7px 16px;
+        border: 1px solid rgba(224, 224, 224, 1);
+        border-radius: 3px;
+        width: 100%;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            border: 1px solid rgba(130, 130, 130, 1);
+
+        }
+
+        &::placeholder {
+            color: rgba(130, 130, 130, 1);
+        }
+    }
+
+    textarea {
+        resize: none;
+        min-height: 90px;
+    }
+
+
+    &.success {
+
+        input,
+        textarea {
+            border: 1px solid rgba(14, 172, 0, 1);
+        }
+    }
+
+    &.error {
+
+        input,
+        textarea {
+            border: 1px solid rgba(235, 87, 87, 1);
+        }
+    }
+}
+
+.form-control input.success,
+.form-control textarea.success {
+    border: 1px solid rgba(14, 172, 0, 1);
+}
+
+.form-control input.error,
+.form-control textarea.error {
+    border: 1px solid rgba(235, 87, 87, 1);
+}
+
+.form-error-message {
+    display: block;
+    color: rgba(235, 87, 87, 1);
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0;
+    margin-top: 6px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-submit {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}

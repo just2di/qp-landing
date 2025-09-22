@@ -1,0 +1,94 @@
+.hero {
+    padding: 40px 0;
+    background-color: var(--section-bg);
+
+    &__action {
+        padding-top: 32px;
+
+        .button {
+         width: 100%;   
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 48px;
+            
+            .button {
+                width: auto;
+            }
+        }
+    }
+
+    &__description {
+        grid-column: 1 / -1;
+        text-align: center;
+
+        h1 {
+            font-family: var(--font-secondary);
+            font-size: 40px;
+            line-height: 44px;
+            font-weight: 700;
+            letter-spacing: 0;
+            padding-bottom: 32px;
+        }
+
+        @media screen and (min-width: 768px) {
+            h1 {
+                font-size: 64px;
+                line-height: 72px;
+            }
+        }
+
+        @media screen and (min-width: 1440px) {
+            padding-top: 37px;
+            text-align: left;
+            grid-column: span 6;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        margin: 0 auto;
+
+        @media screen and (min-width: 768px) {
+            width: 70%;
+        }
+
+        @media screen and (min-width: 1440px) {
+            margin: 0;
+        }
+    }
+
+    &__image {
+        grid-column: 1 / -1;
+        margin: 0 auto;
+        padding-top: 32px;
+
+        img {
+            display: block;
+            height: 300px;
+            width: auto;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 0;
+          img {
+            height: 450px;
+          }
+        }
+
+        @media screen and (min-width: 1440px) {
+            grid-column: 8 / -1;
+
+            img {
+                height: 520px;
+                margin: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        padding: 100px 0;
+    }
+}
