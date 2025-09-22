@@ -20,7 +20,7 @@ export default defineConfig({
 
   build: {
     assetsInlineLimit: 0,
-    outDir: fileURLToPath(new URL('./public', import.meta.url)),
+    outDir: fileURLToPath(new URL('./dist', import.meta.url)),
     emptyOutDir: true,
     rollupOptions: {
       input: {
