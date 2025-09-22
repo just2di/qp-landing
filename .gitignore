@@ -18,6 +18,7 @@ node_modules
 # Production
 /dist
 /build
+/public
 
 # Local env files
 .env*.local
